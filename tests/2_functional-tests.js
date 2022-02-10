@@ -63,7 +63,7 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
-Browser.site = "https://fcc-quality-node.herokuapp.com/";
+Browser.site = "https://fcc-quality-node.herokuapp.com";
 const browser = new Browser();
 
 suiteSetup(function (done) {
@@ -97,8 +97,8 @@ suite("Functional Tests with Zombie.js", function () {
       browser.fill("surname", "Vespucci").then(() => {
         browser.pressButton("submit", () => {
           browser.assert.status(200);
-          browser.assert.text("span#name", "Cristoforo");
-          browser.assert.text("span#surname", "Colombo");
+          browser.assert.text("span#name", "Amerigo");
+          browser.assert.text("span#surname", "Vespucci");
           browser.assert.elements("span#dates", 1);
           done();
         });
