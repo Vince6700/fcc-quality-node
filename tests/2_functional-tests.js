@@ -50,7 +50,7 @@ suite("Functional Tests", function () {
       chai
         .request(server)
         .put("/travellers")
-        .send({ surname: " da Verrazzano" })
+        .send({ surname: "da Verrazzano" })
         .end((err, res) => {
           assert.equal(res.status, 200);
           assert.equal(res.type, "application/json");
