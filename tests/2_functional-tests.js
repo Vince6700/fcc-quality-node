@@ -63,7 +63,7 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
-Browser.site = "http://localhost:3000/";
+Browser.site = "https://fcc-quality-node.herokuapp.com/";
 const browser = new Browser();
 
 suiteSetup(function (done) {
